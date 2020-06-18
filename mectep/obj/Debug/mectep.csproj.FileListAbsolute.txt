@@ -11,5 +11,5 @@ D:\Mektep\mectep\obj\Debug\mectep.Properties.Resources.resources
 D:\Mektep\mectep\obj\Debug\mectep.csproj.GenerateResource.cache
 D:\Mektep\mectep\obj\Debug\mectep.exe
 D:\Mektep\mectep\obj\Debug\mectep.pdb
-D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache
 D:\Mektep\mectep\obj\Debug\StyleComponents.baml
+D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache

@@ -3,14 +3,14 @@
                     xmlns:local="clr-namespace:mectep">
     
    <!--Главный менюдагы кнопкаларга стиль-->
-    <Style x:Key="menuButton" TargetType="Button">
+    <Style x:Key="menuButton" TargetType="ToggleButton">
         <Setter Property="Margin" Value="0,0,2,2"/>
         <Setter Property="Width" Value="300"/>
         <Setter Property="Height" Value="50"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="ToggleButton">
                     <Border Name="border" 
                                 CornerRadius="5"
                                 BorderBrush="{x:Null}"
@@ -77,7 +77,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid  Background="{x:Null}" >
-                        <Border CornerRadius="15" Margin="5,5,5,5" Background="#ccccff" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="50"/>
+                        <Border x:Name="Fon" CornerRadius="15" Margin="5,5,5,5" Background="#FFD3D3C4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="50"/>
                         <Ellipse Name="border" Height="30" Width="30" Fill="#FFCFCFAC" VerticalAlignment="Center" HorizontalAlignment="Left" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
@@ -85,6 +85,7 @@
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="Fill" Value="#0A6E9E"/>
                             <Setter TargetName="border" Property="HorizontalAlignment" Value="Right"/>
+                            <Setter TargetName="Fon" Property="Background" Value="#FF377A9B"/>
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="False">
@@ -228,31 +229,65 @@
     </Style>
 
     <!--Музыка койуучу кнопкаларга стиль-->
-    <Style x:Key="Muzik_Button" TargetType="Button">
+    <Style x:Key="Muzik_Button" TargetType="ToggleButton">
         <Setter Property="Margin" Value="5,5,5,5"/>
-        <Setter Property="Width" Value="200"/>
-        <Setter Property="Height" Value="100"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="50"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="ToggleButton">
                     <Border Name="border" 
-                                CornerRadius="5"
+                                CornerRadius="20,0,20,0"
                                 BorderBrush="{x:Null}"
-                                Background="{x:Null}"
+                                Background="#910A6E9E"
                                 >
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="#7F1C82B4"/>
-                            <Setter TargetName="border" Property="Background" Value="#591C82B4"/>
+                            <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
                         </Trigger>
 
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="White"/>
                             <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
-                            <Setter TargetName="border" Property="BorderThickness" Value="0,0,7,0"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="border" Property="Background" Value="#910A6E9E"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Кошуу.тандоо.очуруу.койуу кнопкалары учун-->
+    <Style x:Key="Add_Delete" TargetType="Button">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                                BorderThickness="0,0,0,0"
+                                CornerRadius="5"
+                                BorderBrush="{x:Null}"
+                                Background="#0A6E9E"
+                                >
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF1393D1"/>
+                            <Setter  Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF06577E"/>
+                            <Setter  Property="Foreground" Value="#0A6E9E"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -261,3 +296,4 @@
         </Setter>
     </Style>
 </ResourceDictionary>
+    

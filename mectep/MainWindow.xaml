@@ -12,18 +12,18 @@
     <Grid>
         
         <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="300" Background="#0A6E9E">
-            <Button Style="{DynamicResource menuButton}" Height="50" Width="300">
+            <ToggleButton Style="{DynamicResource menuButton}" Height="50" Width="300">
                 <TextBlock Text="Maksat"/>
-            </Button>
-            <Button Style="{DynamicResource menuButton}" Height="50" Width="300">
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource menuButton}" Height="50" Width="300">
                 <TextBlock Text="Maksat"/>
-            </Button>
-            <Button Style="{DynamicResource menuButton}" Height="50" Width="300">
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource menuButton}" Height="50" Width="300">
                 <TextBlock Text="Maksat"/>
-            </Button>
-            <Button Style="{DynamicResource menuButton}" Height="50" Width="300">
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource menuButton}" Height="50" Width="300">
                 <TextBlock Text="Maksat"/>
-            </Button>
+            </ToggleButton>
 
 
 
@@ -52,7 +52,19 @@
         <ToggleButton  Margin="652,330,40,40" Style="{DynamicResource ZvukButton}">
 
         </ToggleButton>
-        <Button  Margin="652,330,40,40" >
+        <ToggleButton   Style="{DynamicResource Muzik_Button}" Height="100" Width="250" Margin="321,88,221,232" >
+            <ToggleButton.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF9FA09E" Offset="1"/>
+                </LinearGradientBrush>
+            </ToggleButton.Background>
+
+        </ToggleButton>
+        <Button   Style="{DynamicResource Add_Delete}" Height="100" Width="250" Margin="428,211,114,109" Content="Maksat">
+          
 
         </Button>
     </Grid>
