@@ -66,4 +66,35 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--Звукту башкаруучу кнопкага стиль-->
+    <Style x:Key="ZvukButton" TargetType="ToggleButton">
+        
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid  Background="{x:Null}" >
+                        <Border CornerRadius="15" Margin="5,5,5,5" Background="#ccccff" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="50"/>
+                        <Ellipse Name="border" Height="30" Width="30" Fill="Beige" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Fill" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="HorizontalAlignment" Value="Right"/>
+                        </Trigger>
+
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="border" Property="Fill" Value="Beige"/>
+                            <Setter TargetName="border" Property="HorizontalAlignment" Value="Left"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
