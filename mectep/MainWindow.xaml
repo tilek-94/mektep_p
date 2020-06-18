@@ -29,5 +29,27 @@
 
         </StackPanel>
 
+        <UniformGrid VerticalAlignment="Stretch" HorizontalAlignment="Right" Width="471">
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" >
+                <TextBlock Text="Maksat"/>
+            </ToggleButton>
+            <ToggleButton Style="{DynamicResource CameraButton}" />
+        </UniformGrid>
+
     </Grid>
 </Window>

@@ -35,4 +35,35 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--Камерага кнопкалар стиль-->
+    <Style x:Key="CameraButton" TargetType="ToggleButton">
+        <Setter Property="Margin" Value="5,5,5,5"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Name="border" 
+                                CornerRadius="5,5,5,5"
+                                BorderBrush="{x:Null}"
+                                Background="#ccccff"
+                                >
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#7F1C82B4"/>
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
