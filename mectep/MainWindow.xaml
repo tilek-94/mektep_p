@@ -52,5 +52,8 @@
         <ToggleButton  Margin="652,330,40,40" Style="{DynamicResource ZvukButton}">
 
         </ToggleButton>
+        <Button  Margin="652,330,40,40" >
+
+        </Button>
     </Grid>
 </Window>

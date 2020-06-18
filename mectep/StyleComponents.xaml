@@ -78,7 +78,7 @@
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid  Background="{x:Null}" >
                         <Border CornerRadius="15" Margin="5,5,5,5" Background="#ccccff" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="50"/>
-                        <Ellipse Name="border" Height="30" Width="30" Fill="Beige" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <Ellipse Name="border" Height="30" Width="30" Fill="#FFCFCFAC" VerticalAlignment="Center" HorizontalAlignment="Left" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -88,8 +88,171 @@
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="border" Property="Fill" Value="Beige"/>
+                            <Setter TargetName="border" Property="Fill" Value="#FFCFCFAC"/>
                             <Setter TargetName="border" Property="HorizontalAlignment" Value="Left"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--TextBox стиль-->
+    <Style x:Key="textbox_style" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                 x:Name="textSource" 
+                                 Background="Transparent" 
+                                 BorderBrush="#FFC1C0C0"  
+                                  
+                                     BorderThickness="1,1,1,1"
+                                 Panel.ZIndex="2" />
+                        <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Foreground" Value="Transparent"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                            <Setter Property="Foreground" Value="LightGray"/>
+                                            <Setter Property="FontSize" Value="14"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="DataGrid" x:Key="grid_xml">
+        <!-- Make the border and grid lines a little less imposing -->
+        <Setter Property="BorderBrush" Value="#DDDDDD" />
+        <Setter Property="HorizontalGridLinesBrush" Value="#DDDDDD" />
+        <Setter Property="VerticalGridLinesBrush" Value="#DDDDDD" />
+        <Setter Property="ColumnWidth" Value="*"/>
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource hederstyle}"/>
+
+        <Setter Property="RowStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <!-- Highlight a grid row as the mouse passes over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightCyan" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CellStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridCell">
+
+                    <!-- Add some padding around the contents of a cell -->
+                    <Setter Property="Padding" Value="4,3,4,3" />
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="DataGridCell">
+                                <Border Padding="{TemplateBinding Padding}" 
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            Background="{TemplateBinding Background}">
+                                    <ContentPresenter />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FocusVisualStyle">
+                        <Setter.Value>
+                            <Style TargetType="Control">
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridColumnHeader}" x:Key="hederstyle" >
+        <Setter Property="Background" Value="White" />
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="BorderBrush" Value="#DBDBDB"/>
+        <Setter Property="BorderThickness" Value="0 1 1 1"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Background" Value="#F4F4F4"/>
+    </Style>
+
+    <!-- Add Button MRZ -->
+    <Style x:Key="Add_Button_MRZ" TargetType="Button">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                                BorderThickness="0,0,0,0"
+                                CornerRadius="5"
+                                BorderBrush="{x:Null}"
+                                Background="#0A6E9E"
+                                >
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="White"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="2,2,2,2"/>
+                            <Setter  Property="Foreground" Value="#0A6E9E"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Музыка койуучу кнопкаларга стиль-->
+    <Style x:Key="Muzik_Button" TargetType="Button">
+        <Setter Property="Margin" Value="5,5,5,5"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                                CornerRadius="5"
+                                BorderBrush="{x:Null}"
+                                Background="{x:Null}"
+                                >
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#7F1C82B4"/>
+                            <Setter TargetName="border" Property="Background" Value="#591C82B4"/>
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="0,0,7,0"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
