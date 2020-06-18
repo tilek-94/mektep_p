@@ -240,7 +240,7 @@
                     <Border Name="border" 
                                 CornerRadius="20,0,20,0"
                                 BorderBrush="{x:Null}"
-                                Background="#910A6E9E"
+                                Background="#FF4C8FB0"
                                 >
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
@@ -249,11 +249,11 @@
                             <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF00537C"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="border" Property="Background" Value="#910A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF4C8FB0"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -288,6 +288,57 @@
                             <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
                             <Setter TargetName="border" Property="Background" Value="#FF06577E"/>
                             <Setter  Property="Foreground" Value="#0A6E9E"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Кошуу.тандоо.очуруу.койуу кнопкалары учун-->
+    <Style x:Key="Pausa_Play" TargetType="ToggleButton">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <Border Name="border"                                 
+                                CornerRadius="5"
+                                BorderBrush="{x:Null}"
+                                Background="#0A6E9E">
+                        
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+                    </Border>
+                        <StackPanel x:Name="Play" Visibility="Visible"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0">
+                            <Image Source="Image/Icon/Play.png" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="Угуу" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel x:Name="Paysa" Visibility="Collapsed" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0">
+                            <Image Source="Image/Icon/Paus.png" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="Токтотуу" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF1393D1"/>
+                            <Setter  Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF06577E"/>
+                            <Setter  Property="Foreground" Value="#0A6E9E"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Play" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="Paysa" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="Play" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Paysa" Property="Visibility" Value="Collapsed"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
