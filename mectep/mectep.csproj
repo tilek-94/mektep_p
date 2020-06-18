@@ -98,5 +98,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Paus.png" />
+    <Resource Include="Image\Icon\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\add.png" />
+    <Resource Include="Image\Icon\Select.png" />
+    <Resource Include="Image\Icon\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Svernut.png" />
+    <Resource Include="Image\Icon\Mininmized.png" />
+    <Resource Include="Image\Icon\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Camera.png" />
+    <Resource Include="Image\Icon\Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Camera1.png" />
+    <Resource Include="Image\Icon\Monitor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Add_MRZ.png" />
+    <Resource Include="Image\Icon\Kponguroolor.png" />
+    <Resource Include="Image\Icon\Ubakyt_Boyncha.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
