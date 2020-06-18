@@ -1,0 +1,15 @@
+D:\Mektep\mectep\obj\Debug\MainWindow.g.cs
+D:\Mektep\mectep\obj\Debug\App.g.cs
+D:\Mektep\mectep\obj\Debug\mectep_MarkupCompile.cache
+D:\Mektep\mectep\obj\Debug\mectep_MarkupCompile.lref
+D:\Mektep\mectep\bin\Debug\mectep.exe.config
+D:\Mektep\mectep\bin\Debug\mectep.exe
+D:\Mektep\mectep\bin\Debug\mectep.pdb
+D:\Mektep\mectep\obj\Debug\MainWindow.baml
+D:\Mektep\mectep\obj\Debug\mectep.g.resources
+D:\Mektep\mectep\obj\Debug\mectep.Properties.Resources.resources
+D:\Mektep\mectep\obj\Debug\mectep.csproj.GenerateResource.cache
+D:\Mektep\mectep\obj\Debug\mectep.exe
+D:\Mektep\mectep\obj\Debug\mectep.pdb
+D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache
+D:\Mektep\mectep\obj\Debug\StyleComponents.baml
