@@ -45,20 +45,31 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <Border Name="border" 
+                    <Grid>
+                        <Border Name="border" 
                                 CornerRadius="5,5,5,5"
                                 BorderBrush="{x:Null}"
                                 Background="#ccccff"
                                 >
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
+                        <ContentPresenter x:Name="con"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0"/>
+                        </Border>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Image x:Name="aaa" Source="Image/Icon/Camera1.png" Height="80" Width="80"/>
+                           
+                        </StackPanel>
+                        <Ellipse x:Name="elp" Height="12" Width="12" VerticalAlignment="Top" HorizontalAlignment="Right" Fill="Beige" Margin="0,5,5,0"/>
+                        <TextBlock x:Name="text" Text="{Binding ElementName=con,Path=Content}" FontSize="30" HorizontalAlignment="Right" Margin="0,70,10,0" VerticalAlignment="Bottom" Foreground="#FF5B75A0" />
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#7F1C82B4"/>
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                            <Setter TargetName="aaa" Property="Source" Value="Image/Icon/Camera.png"/>
+                            <Setter TargetName="elp" Property="Fill" Value="Red"/>
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
