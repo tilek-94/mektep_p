@@ -84,6 +84,7 @@ namespace mectep
         }
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
+            FramePage.Navigate(new Uri("Pages/Muzyka.xaml", UriKind.Relative));
             Schet = 4;
             Togl();
         }

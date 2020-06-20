@@ -72,7 +72,7 @@
                     </Button>
                 </StackPanel>
             </Grid>
-            <Grid Grid.Row="1" Grid.Column="1">
+            <Grid Grid.Row="1" Grid.Column="1" Background="#FFE8E8E8">
                 <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0">
                     <TextBlock x:Name="Time" Text="Maksat" FontSize="18" Foreground="#FF0A6E9E" HorizontalAlignment="Left"/>
                     <TextBlock x:Name="Date" Text="Maksat" FontSize="15" Foreground="#FF3E97C1" HorizontalAlignment="Left"/>
