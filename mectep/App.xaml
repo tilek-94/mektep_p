@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:mectep"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="StyleComponents.xaml"/>
     </Application.Resources>
 </Application>

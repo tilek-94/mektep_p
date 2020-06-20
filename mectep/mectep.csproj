@@ -67,12 +67,33 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Camera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Muzyka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Zvanok.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StyleComponents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Camera.xaml.cs">
+      <DependentUpon>Camera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Muzyka.xaml.cs">
+      <DependentUpon>Muzyka.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Zvanok.xaml.cs">
+      <DependentUpon>Zvanok.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,6 +148,57 @@
     <Resource Include="Image\Icon\Add_MRZ.png" />
     <Resource Include="Image\Icon\Kponguroolor.png" />
     <Resource Include="Image\Icon\Ubakyt_Boyncha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Add_MRZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Camera1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Kponguroolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Mininmized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Monitor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Paus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Svernut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Ubakyt_Boyncha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\add01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

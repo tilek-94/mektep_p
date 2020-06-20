@@ -12,4 +12,11 @@ D:\Mektep\mectep\obj\Debug\mectep.csproj.GenerateResource.cache
 D:\Mektep\mectep\obj\Debug\mectep.exe
 D:\Mektep\mectep\obj\Debug\mectep.pdb
 D:\Mektep\mectep\obj\Debug\StyleComponents.baml
+D:\Mektep\mectep\obj\Debug\Pages\Camera.g.cs
+D:\Mektep\mectep\obj\Debug\App.baml
+D:\Mektep\mectep\obj\Debug\Pages\Camera.baml
+D:\Mektep\mectep\obj\Debug\Pages\Zvanok.g.cs
+D:\Mektep\mectep\obj\Debug\Pages\Zvanok.baml
+D:\Mektep\mectep\obj\Debug\Pages\Muzyka.g.cs
+D:\Mektep\mectep\obj\Debug\Pages\Muzyka.baml
 D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache
