@@ -46,6 +46,8 @@ namespace mectep
             datetime = DateTime.Now;
             Date.Text = datetime.ToLongTimeString();
             Time.Text = datetime.ToLongDateString();
+            //FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
         }
 
         private void Svernut_Click(object sender, RoutedEventArgs e)
@@ -68,12 +70,13 @@ namespace mectep
 
         private void Video_Kozomol_Click(object sender, RoutedEventArgs e)
         {
-            FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
             Schet = 1;
             Togl();
         }
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
-        {   FramePage.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
+        {  
+            FramePage.NavigationService.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
             Schet = 2;
             Togl();
         }
