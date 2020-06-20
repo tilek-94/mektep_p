@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid Height="420" Width="800">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,50">
                 <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
@@ -36,7 +36,7 @@
                     </StackPanel>
                 </ToggleButton>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,0">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,50">
                 <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>

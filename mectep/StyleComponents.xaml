@@ -211,8 +211,6 @@
 
     <!-- Add Button MRZ -->
     <Style x:Key="Add_Button_MRZ" TargetType="Button">
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -228,8 +226,7 @@
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
                         </Border>
                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Image x:Name="add" Source="Image/Icon/add.png" Visibility="Visible"/>
-                            <Image x:Name="add1" Source="Image/Icon/Add_MRZ.png" Visibility="Collapsed"/>
+                            <Image x:Name="add" Source="Image/Icon/add.png"/>
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -237,9 +234,14 @@
                             <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
                             <Setter TargetName="border" Property="Background" Value="White"/>
                             <Setter TargetName="border" Property="BorderThickness" Value="2,2,2,2"/>
-                            <Setter TargetName="add" Property="Visibility" Value="Collapsed"/>
-                            <Setter TargetName="add1" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="add" Property="Source" Value="Pages/Image/Icon/add01.png"/>
                             <Setter  Property="Foreground" Value="#0A6E9E"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
+                            <Setter TargetName="border" Property="Background" Value="White"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="2,2,2,2"/>
+                            <Setter TargetName="add" Property="Source" Value="Image/Icon/add.png"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -265,8 +267,6 @@
                                 >
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,5,0">
-                        </Button>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -285,7 +285,42 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--Музыка койуучу жана папкадан музыка алуучу кнопкаларга стиль-->
+    <Style x:Key="Muzik_Button_aluu" TargetType="ToggleButton">
+        <Setter Property="Margin" Value="5,5,5,5"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <Border Name="border" 
+                                CornerRadius="20,0,20,0"
+                                BorderBrush="{x:Null}"
+                                Background="#FF4C8FB0"
+                                >
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" Margin="0,5,5,0" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
+                        </Trigger>
 
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF00537C"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="border" Property="Background" Value="#FF4C8FB0"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!--Кошуу.тандоо.очуруу.койуу кнопкалары учун-->
     <Style x:Key="Add_Delete" TargetType="Button">
         <Setter Property="FontSize" Value="14"/>
