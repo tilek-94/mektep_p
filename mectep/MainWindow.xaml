@@ -5,11 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mectep"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
-    <Window.Resources>
-        <ResourceDictionary Source="StyleComponents.xaml"/>
-    </Window.Resources>
-    <Grid>
+        Title="MainWindow" MinHeight="600" MinWidth="1100" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" Background="{x:Null}" Loaded="Window_Loaded">
 
+    <Grid Margin="7,4,7,18">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="9" Direction="303" ShadowDepth="4" RenderingBias="Quality"/>
+        </Grid.Effect>
+        <Grid Background="White">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <!--Менюдагы кнопкалар-->
+            <Grid Grid.Column="0" Grid.RowSpan="3" Background="#0A6E9E" Panel.ZIndex="1">
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.4" BlurRadius="15" Direction="0"/>
+                </Grid.Effect>
+                <StackPanel  VerticalAlignment="Top" Margin="0,100,0,0">
+                    <ToggleButton x:Name="Video_Kozomol" Style="{DynamicResource menuButton}" Click="Video_Kozomol_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/Icon/Camera.png" Height="45" Width="45"/>
+                            <TextBlock Text="Видео көзөмөл" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
+                        </StackPanel>
+                    </ToggleButton>
+                    <ToggleButton x:Name="MenuButton2" Style="{DynamicResource menuButton}" Click="MenuButton2_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/Icon/Kponguroolor.png" Height="45" Width="45"/>
+                            <TextBlock Text="Коңгуроолор" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
+                        </StackPanel>
+                    </ToggleButton>
+                    <ToggleButton x:Name="MenuButton3" Style="{DynamicResource menuButton}" Click="MenuButton3_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/Icon/Ubakyt_Boyncha.png" Height="45" Width="45"/>
+                            <TextBlock Text="Убакыт боюнча" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
+                        </StackPanel>
+                    </ToggleButton>
+                    <ToggleButton x:Name="MenuButton4" Style="{DynamicResource menuButton}" Click="MenuButton4_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/Icon/Add_MRZ.png" Height="45" Width="45"/>
+                            <TextBlock Text="Үн тууралоо" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
+                        </StackPanel>
+                    </ToggleButton>
+
+                </StackPanel>
+
+            </Grid>
+            <!--Главный HIDER кнопкалар-->
+            <Grid Grid.Column="1" Grid.Row="0" Background="#0A6E9E" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                    <Button Style="{DynamicResource ResourceKey=Close_Button}" VerticalContentAlignment="Bottom" x:Name="Svernut" Click="Svernut_Click" >
+                        <Image Source="Image/Icon/Mininmized.png" VerticalAlignment="Bottom" Height="30" Margin="0,0,0,-10"/>
+                    </Button>
+                    <Button Style="{DynamicResource ResourceKey=Close_Button}" VerticalContentAlignment="Bottom" x:Name="Maximized" Click="Maximized_Click" >
+                        <Image Source="Image/Icon/Svernut.png" VerticalAlignment="Bottom" />
+                    </Button>
+                    <Button Style="{DynamicResource ResourceKey=Close_Button}" VerticalContentAlignment="Bottom" Click="Button_Click_1">
+                        <Image Source="Image/Icon/Close.png" VerticalAlignment="Bottom" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0">
+                    <TextBlock x:Name="Time" Text="Maksat" FontSize="18" Foreground="#FF0A6E9E" HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="Date" Text="Maksat" FontSize="15" Foreground="#FF3E97C1" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Frame x:Name="FramePage">
+                    
+                </Frame>
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>

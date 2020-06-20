@@ -1,12 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:mectep">
-    
-   <!--Главный менюдагы кнопкаларга стиль-->
+
+    <!--Главный менюдагы кнопкаларга стиль-->
     <Style x:Key="menuButton" TargetType="ToggleButton">
         <Setter Property="Margin" Value="0,0,2,2"/>
-        <Setter Property="Width" Value="300"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="60"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -16,7 +16,7 @@
                                 BorderBrush="{x:Null}"
                                 Background="{x:Null}"
                                 >
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="6,0"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -24,7 +24,7 @@
                             <Setter TargetName="border" Property="Background" Value="#591C82B4"/>
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="White"/>
                             <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
                             <Setter TargetName="border" Property="BorderThickness" Value="0,0,7,0"/>
@@ -38,27 +38,38 @@
 
     <!--Камерага кнопкалар стиль-->
     <Style x:Key="CameraButton" TargetType="ToggleButton">
-        <Setter Property="Margin" Value="5,5,5,5"/>
-        <Setter Property="Width" Value="150"/>
+        <Setter Property="Margin" Value="8,8,8,8"/>
+        <Setter Property="Width" Value="155"/>
         <Setter Property="Height" Value="100"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <Border Name="border" 
+                    <Grid>
+                        <Border Name="border" 
                                 CornerRadius="5,5,5,5"
                                 BorderBrush="{x:Null}"
                                 Background="#ccccff"
                                 >
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
+                            <ContentPresenter x:Name="con"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0"/>
+                        </Border>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Image x:Name="aaa" Source="Image/Icon/Camera1.png" Height="80" Width="80"/>
+
+                        </StackPanel>
+                        <Ellipse x:Name="elp" Height="12" Width="12" VerticalAlignment="Top" HorizontalAlignment="Right" Fill="Beige" Margin="0,5,5,0"/>
+                        <TextBlock x:Name="text" Text="{Binding ElementName=con,Path=Content}" FontSize="25" HorizontalAlignment="Right" Margin="0,70,10,0" VerticalAlignment="Bottom" Foreground="#FF5B75A0" />
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#7F1C82B4"/>
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                            <Setter TargetName="aaa" Property="Source" Value="Image/Icon/Monitor.png"/>
+                            <Setter TargetName="elp" Property="Fill" Value="Red"/>
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -69,16 +80,16 @@
 
     <!--Звукту башкаруучу кнопкага стиль-->
     <Style x:Key="ZvukButton" TargetType="ToggleButton">
-        
-        <Setter Property="Width" Value="60"/>
-        <Setter Property="Height" Value="30"/>
+
+        <Setter Property="Width" Value="55"/>
+        <Setter Property="Height" Value="25"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid  Background="{x:Null}" >
-                        <Border x:Name="Fon" CornerRadius="15" Margin="5,5,5,5" Background="#FFD3D3C4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="50"/>
-                        <Ellipse Name="border" Height="30" Width="30" Fill="#FFCFCFAC" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <Border x:Name="Fon" CornerRadius="15" Margin="5,5,5,5" Background="#FFD3D3C4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="40"/>
+                        <Ellipse Name="border" Height="25" Width="25" Fill="#FFCFCFAC" VerticalAlignment="Center" HorizontalAlignment="Left" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -206,19 +217,28 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border" 
+                    <Grid>
+                        <Border Name="border" 
                                 BorderThickness="0,0,0,0"
                                 CornerRadius="5"
                                 BorderBrush="{x:Null}"
                                 Background="#0A6E9E"
                                 >
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
-                    </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image x:Name="add" Source="Image/Icon/add.png" Visibility="Visible"/>
+                            <Image x:Name="add1" Source="Image/Icon/Add_MRZ.png" Visibility="Collapsed"/>
+                        </StackPanel>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="#0A6E9E"/>
                             <Setter TargetName="border" Property="Background" Value="White"/>
                             <Setter TargetName="border" Property="BorderThickness" Value="2,2,2,2"/>
+                            <Setter TargetName="add" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="add1" Property="Visibility" Value="Visible"/>
                             <Setter  Property="Foreground" Value="#0A6E9E"/>
                         </Trigger>
 
@@ -231,19 +251,23 @@
     <!--Музыка койуучу кнопкаларга стиль-->
     <Style x:Key="Muzik_Button" TargetType="ToggleButton">
         <Setter Property="Margin" Value="5,5,5,5"/>
-        <Setter Property="Width" Value="300"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="70"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <Border Name="border" 
+                    <Grid>
+                        <Border Name="border" 
                                 CornerRadius="20,0,20,0"
                                 BorderBrush="{x:Null}"
                                 Background="#FF4C8FB0"
                                 >
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,5,0">
+                        </Button>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
@@ -261,7 +285,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <!--Кошуу.тандоо.очуруу.койуу кнопкалары учун-->
     <Style x:Key="Add_Delete" TargetType="Button">
         <Setter Property="FontSize" Value="14"/>
@@ -309,9 +333,9 @@
                                 CornerRadius="5"
                                 BorderBrush="{x:Null}"
                                 Background="#0A6E9E">
-                        
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
-                    </Border>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+                        </Border>
                         <StackPanel x:Name="Play" Visibility="Visible"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0">
                             <Image Source="Image/Icon/Play.png" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                             <TextBlock Text="Угуу" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -346,5 +370,39 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--Терезени жабуучу кнопкаларга стиль-->
+    <Style x:Key="Close_Button" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border"                                 
+                                BorderBrush="{x:Null}"
+                                Background="{x:Null}"
+                                >
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF63A1BF"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF63A1BF"/>
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF034D70"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF034D70"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ScrollViewer учун кнопкаларга стиль-->
 </ResourceDictionary>
     
