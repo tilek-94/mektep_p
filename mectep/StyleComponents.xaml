@@ -285,42 +285,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <!--Музыка койуучу жана папкадан музыка алуучу кнопкаларга стиль-->
-    <Style x:Key="Muzik_Button_aluu" TargetType="ToggleButton">
-        <Setter Property="Margin" Value="5,5,5,5"/>
-        <Setter Property="Width" Value="250"/>
-        <Setter Property="Height" Value="70"/>
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ToggleButton">
-                    <Grid>
-                        <Border Name="border" 
-                                CornerRadius="20,0,20,0"
-                                BorderBrush="{x:Null}"
-                                Background="#FF4C8FB0"
-                                >
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" Margin="0,5,5,0" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
-                        </Trigger>
 
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#FF00537C"/>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="border" Property="Background" Value="#FF4C8FB0"/>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     <!--Кошуу.тандоо.очуруу.койуу кнопкалары учун-->
     <Style x:Key="Add_Delete" TargetType="Button">
         <Setter Property="FontSize" Value="14"/>
@@ -371,13 +336,13 @@
 
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
                         </Border>
-                        <StackPanel x:Name="Play" Visibility="Visible"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0">
+                        <StackPanel x:Name="Play" Visibility="Visible"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="33,0,0,0">
                             <Image Source="Image/Icon/Play.png" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                             <TextBlock Text="Угуу" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel x:Name="Paysa" Visibility="Collapsed" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0">
+                        <StackPanel x:Name="Paysa" Visibility="Collapsed" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="33,0,0,0">
                             <Image Source="Image/Icon/Paus.png" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                            <TextBlock Text="Токтотуу" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Токтотуу" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100"/>
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>

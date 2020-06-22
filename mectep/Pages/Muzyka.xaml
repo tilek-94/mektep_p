@@ -7,7 +7,44 @@
       mc:Ignorable="d" 
       d:DesignHeight="520" d:DesignWidth="900"
       Title="Muzyka" Background="White">
+    <Page.Resources>
+        <!--Музыка койуучу жана папкадан музыка алуучу кнопкаларга стиль-->
+        <Style x:Key="Muzik_Button_aluu" TargetType="ToggleButton">
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="70"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid>
+                            <Border Name="border" 
+                                CornerRadius="20,0,20,0"
+                                BorderBrush="{x:Null}"
+                                Background="#FF4C8FB0"
+                                >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" Margin="0,5,5,0" VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="Muz_Button" Click="Muz_Button_Click"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#721C82B4"/>
+                            </Trigger>
 
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF00537C"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#FF4C8FB0"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid Height="420" Width="800">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,50">

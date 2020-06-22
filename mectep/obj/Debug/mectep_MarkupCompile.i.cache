@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Mektep\mectep\App.xaml
-51274740603
+71288030356
 
-9252925749
+11-1962843756
 13-1505183044
-MainWindow.xaml;Pages\Camera.xaml;Pages\Muzyka.xaml;Pages\Zvanok.xaml;StyleComponents.xaml;
+MainWindow.xaml;Pages\Camera.xaml;Pages\Muzyka.xaml;Pages\Window_Ubakyt.xaml;Pages\Zvanok.xaml;StyleComponents.xaml;Window_Add_MRZ.xaml;
 
-False
+True
 

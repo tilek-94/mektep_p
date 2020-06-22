@@ -20,9 +20,18 @@ namespace mectep.Pages
     /// </summary>
     public partial class Muzyka : Page
     {
+        MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
         public Muzyka()
         {
             InitializeComponent();
+        }
+
+        private void Muz_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window_Add_MRZ newwindow = new Window_Add_MRZ();
+            newwindow.Owner = gk;
+            newwindow.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+            newwindow.ShowDialog();
         }
     }
 }

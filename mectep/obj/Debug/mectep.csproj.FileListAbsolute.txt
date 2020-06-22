@@ -19,4 +19,8 @@ D:\Mektep\mectep\obj\Debug\Pages\Zvanok.g.cs
 D:\Mektep\mectep\obj\Debug\Pages\Zvanok.baml
 D:\Mektep\mectep\obj\Debug\Pages\Muzyka.g.cs
 D:\Mektep\mectep\obj\Debug\Pages\Muzyka.baml
+D:\Mektep\mectep\obj\Debug\Window_Add_MRZ.g.cs
+D:\Mektep\mectep\obj\Debug\Window_Add_MRZ.baml
 D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache
+D:\Mektep\mectep\obj\Debug\Pages\Window_Ubakyt.g.cs
+D:\Mektep\mectep\obj\Debug\Pages\Window_Ubakyt.baml

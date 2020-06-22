@@ -20,6 +20,8 @@ namespace mectep
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        MainWindow Window_Orientation = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
         int Schet = 0;
         public MainWindow()
         {
@@ -81,7 +83,8 @@ namespace mectep
             Togl();
         }
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
-        {
+        {   
+            FramePage.Navigate(new Uri("Pages/Window_Ubakyt.xaml", UriKind.Relative));
             Schet = 3;
             Togl();
         }
@@ -127,6 +130,10 @@ namespace mectep
             }
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+            MessageBox.Show(clickedButton.Content.ToString());
+        }
     }
 }
