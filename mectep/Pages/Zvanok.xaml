@@ -11,25 +11,25 @@
     <Grid>
         <Grid Height="420" Width="800">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0">
-                <ToggleButton x:Name="tb_1" Style="{DynamicResource Muzik_Button}" Click="tb_1_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Кирүү" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_2" Style="{DynamicResource Muzik_Button}" Click="tb_2_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Чыгуу" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_3" Style="{DynamicResource Muzik_Button}" Click="tb_3_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock FontSize="22" Foreground="White" VerticalAlignment="Center">Мамлекеттик<LineBreak/>гимн</TextBlock>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_4" Style="{DynamicResource Muzik_Button}" Click="tb_4_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Тил гимни" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
@@ -37,25 +37,25 @@
                 </ToggleButton>
             </StackPanel>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,0">
-                <ToggleButton x:Name="tb_5" Style="{DynamicResource Muzik_Button}" Click="tb_5_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Өрт сигналы" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_6" Style="{DynamicResource Muzik_Button}" Click="tb_6_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Аварийя" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_7" Style="{DynamicResource Muzik_Button}" Click="tb_7_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Жер титирөө" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ToggleButton>
-                <ToggleButton x:Name="tb_8" Style="{DynamicResource Muzik_Button}" Click="tb_8_Click">
+                <ToggleButton Style="{DynamicResource Muzik_Button}">
                     <StackPanel Orientation="Horizontal" Width="200" Height="60">
                         <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
                         <TextBlock Text="Жарыя" FontSize="22" Foreground="White" VerticalAlignment="Center"/>

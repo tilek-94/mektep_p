@@ -21,7 +21,6 @@ namespace mectep
     public partial class MainWindow : Window
     {
         int Schet = 0;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -93,23 +92,18 @@ namespace mectep
             if (Schet == 1)
             {
                 Video_Kozomol.IsChecked = true;
-              
             }
             else
             {
                 Video_Kozomol.IsChecked = false;
-             
-
             }
             if (Schet == 2)
             {
                 MenuButton2.IsChecked = true;
-               
             }
             else
             {
                 MenuButton2.IsChecked = false;
-              
             }
             if (Schet == 3)
             {
@@ -128,6 +122,7 @@ namespace mectep
                 MenuButton4.IsChecked = false;
             }
         }
-          
+
+       
     }
 }
