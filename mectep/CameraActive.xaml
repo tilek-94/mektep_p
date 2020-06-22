@@ -1,0 +1,13 @@
+﻿<Window x:Class="mectep.CameraActive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mectep"
+        mc:Ignorable="d"
+        Title="CameraActive" MinHeight="600" MinWidth="1100" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" Background="White" Activated="Window_Activated">
+    <Grid>
+        <MediaElement x:Name="Camera"  LoadedBehavior="Manual" UnloadedBehavior="Manual"  ></MediaElement>
+        <Button Content="X" HorizontalAlignment="Left" Height="40" Margin="718,10,0,0" VerticalAlignment="Top" Width="40" Click="Button_Click"></Button>           
+    </Grid>
+</Window>
