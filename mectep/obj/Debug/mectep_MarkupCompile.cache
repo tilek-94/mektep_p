@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Project\Mektep\mectep\obj\Debug\
+D:\Mektep\mectep\obj\Debug\
 mectep
 none
 false
 DEBUG;TRACE
-E:\Project\Mektep\mectep\App.xaml
+D:\Mektep\mectep\App.xaml
 51274740603
 
-91045750488
+8-1070856127
 13-1505183044
 MainWindow.xaml;Pages\Camera.xaml;Pages\Muzyka.xaml;Pages\Zvanok.xaml;StyleComponents.xaml;
 
-True
+False
 
