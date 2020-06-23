@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace mectep
 {
@@ -26,9 +27,14 @@ namespace mectep
             InitializeComponent();
             this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+
         }
 
-      
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -42,12 +48,10 @@ namespace mectep
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DateTime datetime = new DateTime();
-            datetime = DateTime.Now;
-            Date.Text = datetime.ToLongTimeString();
-            Time.Text = datetime.ToLongDateString();
-            //FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
-            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+
+
+            Date.Text = DateTime.Now.ToLongDateString();
+
         }
 
         private void Svernut_Click(object sender, RoutedEventArgs e)
@@ -57,7 +61,7 @@ namespace mectep
 
         private void Maximized_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Width==1100 && this.Height==600)
+            if (this.Width == 1100 && this.Height == 600)
             {
                 this.WindowState = WindowState.Maximized;
             }
@@ -70,13 +74,13 @@ namespace mectep
 
         private void Video_Kozomol_Click(object sender, RoutedEventArgs e)
         {
-            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+            FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
             Schet = 1;
             Togl();
         }
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
-        {  
-            FramePage.NavigationService.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
+        {
+            FramePage.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
             Schet = 2;
             Togl();
         }
@@ -87,7 +91,6 @@ namespace mectep
         }
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
-            FramePage.Navigate(new Uri("Pages/Muzyka.xaml", UriKind.Relative));
             Schet = 4;
             Togl();
         }
@@ -126,7 +129,16 @@ namespace mectep
                 MenuButton4.IsChecked = false;
             }
         }
-
-       
+        void timer_Tick(object sender, EventArgs e)
+        {
+            Time.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
+
+
+
+
+
+
+
