@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mectep"
         mc:Ignorable="d"
-        Title="CameraActive" MinHeight="600" MinWidth="1100" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" Background="White" Activated="Window_Activated">
+        Title="CameraActive" Height="600" Width="600">
     <Grid>
-        <MediaElement x:Name="Camera"  LoadedBehavior="Manual" UnloadedBehavior="Manual"  ></MediaElement>
-        <Button Content="X" HorizontalAlignment="Left" Height="40" Margin="718,10,0,0" VerticalAlignment="Top" Width="40" Click="Button_Click"></Button>           
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="E:\klip\12345.mp4" />
     </Grid>
 </Window>

@@ -22,19 +22,7 @@ namespace mectep
         public CameraActive()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Camera.Stop();
-            
-         
-        }
-
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            Camera.Source=new Uri("E:\\klip\\12345.mp4");
-            Camera.Play();
         }
     }
 }
