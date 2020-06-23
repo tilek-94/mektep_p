@@ -21,8 +21,6 @@ namespace mectep.Pages
     /// </summary>
     public partial class Camera : Page
     {
-        public CameraActive cam = new CameraActive();
-
         public int id_b = 0;
         public Camera()
         {
