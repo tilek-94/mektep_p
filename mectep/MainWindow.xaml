@@ -14,7 +14,7 @@
         <Grid Background="White">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -25,11 +25,22 @@
 
 
             <!--Менюдагы кнопкалар-->
-            <Grid Grid.Column="0" Grid.RowSpan="3" Background="#0A6E9E" Panel.ZIndex="1">
+            <Grid Grid.Column="0" Grid.RowSpan="3" Background="#0A6E9E" Panel.ZIndex="1" Width="200">
                 <Grid.Effect>
                     <DropShadowEffect Opacity="0.4" BlurRadius="15" Direction="0"/>
                 </Grid.Effect>
-                <StackPanel  VerticalAlignment="Top" Margin="0,100,0,0">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="80">
+                    <StackPanel>
+                        <Button x:Name="Open_Menu" Style="{DynamicResource Opening_Closing}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed">
+                            <Image Source="Image/Icon/Opening.png"  />
+                        </Button>
+                        <Button x:Name="Close_Menu" Style="{DynamicResource Opening_Closing}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Visible">
+                            <Image Source="Image/Icon/Closing.png" />
+                        </Button>
+                    </StackPanel>
+                   
+                </Grid>
+                <StackPanel  VerticalAlignment="Top" Margin="0,80,0,0">
                     <ToggleButton x:Name="Video_Kozomol" Style="{DynamicResource menuButton}" Click="Video_Kozomol_Click" >
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/Icon/Camera.png" Height="45" Width="45"/>
@@ -79,7 +90,7 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="3" Grid.Column="2">
-                <Frame x:Name="FramePage">
+                <Frame x:Name="FramePage" NavigationUIVisibility="Hidden">
                     
                 </Frame>
             </Grid>

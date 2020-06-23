@@ -35,7 +35,37 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--Главный менюну ачып жабуу учун стиль-->
+    <Style x:Key="Opening_Closing" TargetType="Button">
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                                CornerRadius="0"
+                                BorderBrush="{x:Null}"
+                                Background="{x:Null}"
+                                >
+                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#7F1C82B4"/>
+                            <Setter TargetName="border" Property="Background" Value="#591C82B4"/>
+                        </Trigger>
 
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                            <Setter TargetName="border" Property="Background" Value="#FF1C82B4"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!--Камерага кнопкалар стиль-->
     <Style x:Key="CameraButton" TargetType="ToggleButton">
         <Setter Property="Margin" Value="8,8,8,8"/>

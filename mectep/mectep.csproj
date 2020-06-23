@@ -145,7 +145,6 @@
   <ItemGroup>
     <Resource Include="Image\Icon\Svernut.png" />
     <Resource Include="Image\Icon\Mininmized.png" />
-    <Resource Include="Image\Icon\Menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Icon\Close.png" />
@@ -222,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Image\Icon\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Closing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Opening.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
