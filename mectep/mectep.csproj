@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Window_Ubakyt.xaml.cs">
+      <DependentUpon>Window_Ubakyt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_Add_MRZ.xaml.cs">
+      <DependentUpon>Window_Add_MRZ.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,11 +81,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Window_Ubakyt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Zvanok.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StyleComponents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_Add_MRZ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,7 +145,6 @@
   <ItemGroup>
     <Resource Include="Image\Icon\Svernut.png" />
     <Resource Include="Image\Icon\Mininmized.png" />
-    <Resource Include="Image\Icon\Menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Icon\Close.png" />
@@ -199,6 +212,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Image\Icon\add01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Select1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Add_MRZ1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Image\Icon\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Closing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\Opening.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
