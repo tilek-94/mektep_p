@@ -1,0 +1,75 @@
+﻿<Page x:Class="mectep.Pages.Muzyka"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mectep.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="520" d:DesignWidth="900"
+      Title="Muzyka" Background="White">
+
+    <Grid>
+        <Grid Height="420" Width="800">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,50">
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Кирүү" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-100,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Чыгуу" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-100,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock  FontSize="22" Foreground="White" VerticalAlignment="Center">Мамлекеттик<LineBreak/>гимн</TextBlock>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-26,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Тил гимни" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-56,0"/>
+                    </StackPanel>
+                </ToggleButton>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,50">
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Өрт сигналы" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-33,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Аварийя" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-73,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Жер титирөө" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-28,0"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource Muzik_Button_aluu}">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="60">
+                        <Image Source="Image/Icon/Kponguroolor.png" Height="55" Width="60"/>
+                        <TextBlock Text="Жарыя" FontSize="22" Foreground="White" VerticalAlignment="Center"/>
+                        <Button Style="{StaticResource Add_Button_MRZ}" Height="23" Width="23" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,-90,0"/>
+                    </StackPanel>
+                </ToggleButton>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
