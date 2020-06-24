@@ -13,13 +13,10 @@ D:\Mektep\mectep\obj\Debug\mectep.exe
 D:\Mektep\mectep\obj\Debug\mectep.pdb
 D:\Mektep\mectep\obj\Debug\StyleComponents.baml
 D:\Mektep\mectep\obj\Debug\Pages\Camera.g.cs
-D:\Mektep\mectep\obj\Debug\App.baml
 D:\Mektep\mectep\obj\Debug\Pages\Camera.baml
 D:\Mektep\mectep\obj\Debug\Pages\Zvanok.g.cs
-D:\Mektep\mectep\obj\Debug\Pages\Zvanok.baml
 D:\Mektep\mectep\obj\Debug\Pages\Muzyka.g.cs
 D:\Mektep\mectep\obj\Debug\Pages\Muzyka.baml
-D:\Mektep\mectep\obj\Debug\mectep.csprojAssemblyReference.cache
 E:\Mektep\mectep\bin\Debug\mectep.exe.config
 E:\Mektep\mectep\bin\Debug\mectep.exe
 E:\Mektep\mectep\bin\Debug\mectep.pdb
@@ -89,3 +86,9 @@ D:\project\mektep_p\mectep\obj\Debug\mectep.csproj.GenerateResource.cache
 D:\project\mektep_p\mectep\obj\Debug\mectep.csproj.CoreCompileInputs.cache
 D:\project\mektep_p\mectep\obj\Debug\mectep.exe
 D:\project\mektep_p\mectep\obj\Debug\mectep.pdb
+D:\Mektep\mectep\obj\Debug\Pages\Window_Ubakyt.g.cs
+D:\Mektep\mectep\obj\Debug\Window_Add_MRZ.g.cs
+D:\Mektep\mectep\obj\Debug\Pages\Window_Ubakyt.baml
+D:\Mektep\mectep\obj\Debug\Window_Add_MRZ.baml
+D:\Mektep\mectep\obj\Debug\App.baml
+D:\Mektep\mectep\obj\Debug\Pages\Zvanok.baml

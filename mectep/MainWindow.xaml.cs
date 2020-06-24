@@ -130,6 +130,16 @@ namespace mectep
         {
             Time.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void Open_Menu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Close_Menu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
