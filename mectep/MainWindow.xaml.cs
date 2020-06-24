@@ -135,5 +135,29 @@ namespace mectep
             Button clickedButton = (Button)sender;
             MessageBox.Show(clickedButton.Content.ToString());
         }
+
+        private void Close_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            Close_Menu.Visibility = Visibility.Collapsed;
+            Open_Menu.Visibility = Visibility.Visible;
+            textBlock.Visibility = Visibility.Collapsed;
+            textBlock1.Visibility = Visibility.Collapsed;
+            textBlock2.Visibility = Visibility.Collapsed;
+            textBlock3.Visibility = Visibility.Collapsed;
+            grid.Width = 60;
+            Menu_Stacpanel.HorizontalAlignment = HorizontalAlignment.Center;
+        }
+
+        private void Open_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            Close_Menu.Visibility = Visibility.Visible;
+            Open_Menu.Visibility = Visibility.Collapsed;
+            textBlock.Visibility = Visibility.Visible;
+            textBlock1.Visibility = Visibility.Visible;
+            textBlock2.Visibility = Visibility.Visible;
+            textBlock3.Visibility = Visibility.Visible;
+            grid.Width = 200;
+            Menu_Stacpanel.HorizontalAlignment = HorizontalAlignment.Right;
+        }
     }
 }
