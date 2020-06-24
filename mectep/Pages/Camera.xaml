@@ -14,29 +14,31 @@
         </Grid.RowDefinitions>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <WrapPanel Margin="10,10,10,70" Grid.RowSpan="2" MinWidth="870" MaxWidth="1032">
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="1-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="2-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="3-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="4-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="5-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="6-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="7-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="8-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="9-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="10-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="11-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="12-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="13-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="14-кам"/>
-                <ToggleButton Style="{DynamicResource CameraButton}" Content="15-кам"/>
+                <ToggleButton x:Name="tb_01" Style="{DynamicResource CameraButton}" Content="1-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_02" Style="{DynamicResource CameraButton}" Content="2-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_03" Style="{DynamicResource CameraButton}" Content="3-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_04" Style="{DynamicResource CameraButton}" Content="4-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_05" Style="{DynamicResource CameraButton}" Content="5-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_06" Style="{DynamicResource CameraButton}" Content="6-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_07" Style="{DynamicResource CameraButton}" Content="7-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_08" Style="{DynamicResource CameraButton}" Content="8-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_09" Style="{DynamicResource CameraButton}" Content="9-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_10" Style="{DynamicResource CameraButton}" Content="10-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_11" Style="{DynamicResource CameraButton}" Content="11-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_12" Style="{DynamicResource CameraButton}" Content="12-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_13" Style="{DynamicResource CameraButton}" Content="13-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_14" Style="{DynamicResource CameraButton}" Content="14-кам" Checked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="tb_15" Style="{DynamicResource CameraButton}" Content="15-кам" Checked="ToggleButton_Checked"/>
+
 
             </WrapPanel>
         </ScrollViewer>
         <Grid Grid.Row="1">
             <Grid Height="70" Width="900" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0" Content="Бир канча камераны тандоо" Foreground="#0A6E9E" FontSize="18"></CheckBox>
+                <CheckBox x:Name="ch_b" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0" Content="Бир канча камераны тандоо" Foreground="#0A6E9E" FontSize="18" Click="ch_b_Click"/>
                 <ToggleButton x:Name="Camera_Jandyruu" Style="{DynamicResource ZvukButton}" Click="Camera_Jandyruu_Click"/>
                 <TextBlock x:Name="Camera_Message"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="486,22,0,24" Text="Баарын жандыруу" Foreground="#0A6E9E" FontSize="18"></TextBlock>
+                <Label x:Name="lb_1" Content="" HorizontalAlignment="Left" Height="34" Margin="40,0,0,0" VerticalAlignment="Top" Width="780" />
             </Grid>
         </Grid>
     </Grid>

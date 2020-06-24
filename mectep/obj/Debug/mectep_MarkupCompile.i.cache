@@ -4,21 +4,17 @@
 winexe
 C#
 .cs
-D:\Mektep\mectep\obj\Debug\
+D:\project\mektep_p\mectep\obj\Debug\
 mectep
 none
 false
 DEBUG;TRACE
-D:\Mektep\mectep\App.xaml
-<<<<<<< HEAD
-11151548125
-=======
-2-1713369133
->>>>>>> Maksat
+D:\project\mektep_p\mectep\App.xaml
+51274740603
 
-6-693964626
+9252925749
 13-1505183044
-MainWindow.xaml;StyleComponents.xaml;
+MainWindow.xaml;Pages\Camera.xaml;Pages\Muzyka.xaml;Pages\Zvanok.xaml;StyleComponents.xaml;
 
-False
+True
 
