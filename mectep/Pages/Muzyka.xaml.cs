@@ -25,7 +25,7 @@ namespace mectep.Pages
         {
             InitializeComponent();
         }
-
+        //bot
         private void Muz_Button_Click(object sender, RoutedEventArgs e)
         {
             Window_Add_MRZ newwindow = new Window_Add_MRZ();
