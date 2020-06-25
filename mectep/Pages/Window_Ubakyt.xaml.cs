@@ -19,7 +19,7 @@ namespace mectep.Pages
     /// Логика взаимодействия для Window_Ubakyt.xaml
     /// </summary>
     public partial class Window_Ubakyt : Page
-    {
+    {   //DoFi
         public Window_Ubakyt()
         {
             InitializeComponent();
