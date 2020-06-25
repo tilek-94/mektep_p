@@ -60,10 +60,7 @@ namespace mectep.Pages
                         btn_name[i].IsChecked = false;
                         
                     }
-                    else {
-                        btnSender.IsChecked = true;
-                       
-                    }
+                    
                 }
                 
                 lb_1.Content= Camera_.cameraVK(numBerbtn);
@@ -75,8 +72,8 @@ namespace mectep.Pages
                     lb_1.Content = Camera_.cameraVK2(id_btn, true);
                 
             }
-            
-               
+            btnSender.IsChecked = true;
+
         }
         private void ch_b_Click(object sender, RoutedEventArgs e)
         {
