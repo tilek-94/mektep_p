@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mectep.All_class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace mectep
     {
 
         MainWindow Window_Orientation = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+        Music music = new Music();
         int Schet = 0;
         public MainWindow()
         {
@@ -75,24 +77,28 @@ namespace mectep
             FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
             Schet = 1;
             Togl();
+            music.off();
         }
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
         {
             FramePage.NavigationService.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
             Schet = 2;
             Togl();
+            music.off();
         }
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
         {
             FramePage.Navigate(new Uri("Pages/Window_Ubakyt.xaml", UriKind.Relative));
             Schet = 3;
             Togl();
+            music.off();
         }
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
             FramePage.Navigate(new Uri("Pages/Muzyka.xaml", UriKind.Relative));
             Schet = 4;
             Togl();
+            music.off();
         }
         public void Togl()
         {
@@ -159,5 +165,7 @@ namespace mectep
             grid.Width = 200;
             Menu_Stacpanel.HorizontalAlignment = HorizontalAlignment.Right;
         }
+
+
     }
 }
