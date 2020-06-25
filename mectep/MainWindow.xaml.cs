@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace mectep
 {
@@ -21,14 +20,14 @@ namespace mectep
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        MainWindow Window_Orientation = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
         int Schet = 0;
         public MainWindow()
         {
             InitializeComponent();
             this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            
-
         }
 
 
@@ -45,10 +44,12 @@ namespace mectep
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-            Date.Text = DateTime.Now.ToLongDateString();
-
+            DateTime datetime = new DateTime();
+            datetime = DateTime.Now;
+            Date.Text = datetime.ToLongTimeString();
+            Time.Text = datetime.ToLongDateString();
+            //FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
         }
 
         private void Svernut_Click(object sender, RoutedEventArgs e)
@@ -71,23 +72,25 @@ namespace mectep
 
         private void Video_Kozomol_Click(object sender, RoutedEventArgs e)
         {
-            FramePage.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
+            FramePage.NavigationService.Navigate(new Uri("Pages/Camera.xaml", UriKind.Relative));
             Schet = 1;
             Togl();
         }
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
         {
-            FramePage.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
+            FramePage.NavigationService.Navigate(new Uri("Pages/Zvanok.xaml", UriKind.Relative));
             Schet = 2;
             Togl();
         }
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
         {
+            FramePage.Navigate(new Uri("Pages/Window_Ubakyt.xaml", UriKind.Relative));
             Schet = 3;
             Togl();
         }
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
+            FramePage.Navigate(new Uri("Pages/Muzyka.xaml", UriKind.Relative));
             Schet = 4;
             Togl();
         }
@@ -126,26 +129,35 @@ namespace mectep
                 MenuButton4.IsChecked = false;
             }
         }
-        void timer_Tick(object sender, EventArgs e)
-        {
-            Time.Text = DateTime.Now.ToLongTimeString();
-        }
 
-        private void Open_Menu_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Button clickedButton = (Button)sender;
+            MessageBox.Show(clickedButton.Content.ToString());
         }
 
         private void Close_Menu_Click(object sender, RoutedEventArgs e)
         {
+            Close_Menu.Visibility = Visibility.Collapsed;
+            Open_Menu.Visibility = Visibility.Visible;
+            textBlock.Visibility = Visibility.Collapsed;
+            textBlock1.Visibility = Visibility.Collapsed;
+            textBlock2.Visibility = Visibility.Collapsed;
+            textBlock3.Visibility = Visibility.Collapsed;
+            grid.Width = 60;
+            Menu_Stacpanel.HorizontalAlignment = HorizontalAlignment.Center;
+        }
 
+        private void Open_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            Close_Menu.Visibility = Visibility.Visible;
+            Open_Menu.Visibility = Visibility.Collapsed;
+            textBlock.Visibility = Visibility.Visible;
+            textBlock1.Visibility = Visibility.Visible;
+            textBlock2.Visibility = Visibility.Visible;
+            textBlock3.Visibility = Visibility.Visible;
+            grid.Width = 200;
+            Menu_Stacpanel.HorizontalAlignment = HorizontalAlignment.Right;
         }
     }
 }
-
-
-
-
-
-
-

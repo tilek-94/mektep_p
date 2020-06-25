@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
+using mectep.All_class;
 
 namespace mectep.Pages
 {
@@ -21,7 +22,7 @@ namespace mectep.Pages
     /// </summary>
     public partial class Camera : Page
     {
-        public int id_b = 0;
+        public int id_btn = 0;
         public Camera()
         {
             InitializeComponent();
@@ -39,87 +40,48 @@ namespace mectep.Pages
             }
 
         }
-        ToggleButton[] btn_name = new ToggleButton[15];
-
+        ToggleButton[] btn_name = new ToggleButton[20];
+        Camera_class Camera_ = new Camera_class(15);
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
-            string all = "";
-            int[] y = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            
-            ToggleButton fgjk = sender as ToggleButton;
-            //MessageBox.Show(fgjk.Name.ToString());
-            string xxx = fgjk.Name.ToString();
+            ToggleButton btnSender = sender as ToggleButton;
 
-
-            if (Convert.ToInt32(Convert.ToString(fgjk.Name.ToString()[3])) == 0)
-            {
-
-                id_b = Convert.ToInt32(Convert.ToString(fgjk.Name.ToString()[4]));
-            }
-            else
-            {
-                id_b =/*(Convert.ToInt32(Convert.ToString(fgjk.Name.ToString()[3])) *10)*/10 + Convert.ToInt32(Convert.ToString(fgjk.Name.ToString()[4]));
-            }
-
-            btn_name[id_b - 1] = sender as ToggleButton;
+            string text = btnSender.Name.ToString().Substring(3);
+            id_btn = Convert.ToInt32(text);
+            btn_name[id_btn] = sender as ToggleButton;
+            int numBerbtn = id_btn;
             if (ch_b.IsChecked == false)
             {
 
-                lb_1.Content = "";
-                for (int a = 0; a < 15; a++)
+                for (int i = 1; i <= 15; i++)
                 {
-
-
-                    if (btn_name[a] != null && btn_name[id_b - 1] != btn_name[a])
+                    if (btn_name[i] != null && id_btn != i)
                     {
-                        btn_name[a].IsChecked = false;
-
-                        y[id_b - 1] = 1;
+                        btn_name[i].IsChecked = false;
 
                     }
-                    if (btn_name[0] != null)
-                    {
-                        if (btn_name[0].IsChecked == true)
-                        {
-                            y[0] = 1;
-                        }
-                    }
-                   
-                    all += Convert.ToString(y[a]);
+
                 }
-                lb_1.Content = all;
+
+                lb_1.Content = Camera_.cameraVK(numBerbtn);
+
             }
             else
             {
-               
-                for (int r = 0; r < 15; r++)
-                {
-                     string[] sq = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
-                    if (btn_name[r] != null) 
-                    {
-                        sq[r] += "1";
-                    }
-                    else
-                    {
-                        sq[r] += "0";
-                    }
-                    
-                     
-                   
-                    all+=sq[r];
 
-                }
-                lb_1.Content = all;
-        
+                lb_1.Content = Camera_.cameraVK2(id_btn, true);
+
             }
-            
+            btnSender.IsChecked = true;
+
         }
         private void ch_b_Click(object sender, RoutedEventArgs e)
         {
 
             if (ch_b.IsChecked == false)
             {
-                for (int a = 0; a < 15; a++)
+
+                for (int a = 0; a <= 15; a++)
                 {
                     if (btn_name[a] != null)
                     {
@@ -127,12 +89,42 @@ namespace mectep.Pages
 
                     }
                 }
+                Camera_.MassivNul();
             }
             else
             {
-                
+                for (int a = 0; a <= 15; a++)
+                {
+                    if (btn_name[a] != null)
+                    {
+                        btn_name[a].IsChecked = false;
+
+                    }
+                }
+
+                Camera_.MassivNul();
 
             }
+        }
+
+        private void ch_b_Click2(object sender, RoutedEventArgs e)
+        {
+            ToggleButton btnSender = sender as ToggleButton;
+            string text = btnSender.Name.ToString().Substring(3);
+            id_btn = Convert.ToInt32(text);
+            btn_name[id_btn] = sender as ToggleButton;
+            if (ch_b.IsChecked == false)
+            {
+                Camera_.MassivNul();
+                lb_1.Content = Camera_.cameraVK2(id_btn, false);
+            }
+            else
+            {
+                lb_1.Content = Camera_.cameraVK2(id_btn, false);
+
+            }
+
+
         }
     }
 }

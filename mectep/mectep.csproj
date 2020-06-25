@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="All_class\Camera_class.cs" />
     <Compile Include="Pages\Window_Ubakyt.xaml.cs">
       <DependentUpon>Window_Ubakyt.xaml</DependentUpon>
     </Compile>

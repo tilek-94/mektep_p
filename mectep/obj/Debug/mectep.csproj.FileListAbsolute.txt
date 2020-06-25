@@ -92,3 +92,7 @@ D:\Mektep\mectep\obj\Debug\Pages\Window_Ubakyt.baml
 D:\Mektep\mectep\obj\Debug\Window_Add_MRZ.baml
 D:\Mektep\mectep\obj\Debug\App.baml
 D:\Mektep\mectep\obj\Debug\Pages\Zvanok.baml
+D:\project\mektep_p\mectep\obj\Debug\Pages\Window_Ubakyt.g.cs
+D:\project\mektep_p\mectep\obj\Debug\Window_Add_MRZ.g.cs
+D:\project\mektep_p\mectep\obj\Debug\Pages\Window_Ubakyt.baml
+D:\project\mektep_p\mectep\obj\Debug\Window_Add_MRZ.baml
