@@ -36,7 +36,7 @@
         <Grid Grid.Row="1">
             <Grid Height="70" Width="900" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <CheckBox x:Name="ch_b" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0" Content="Бир канча камераны тандоо" Foreground="#0A6E9E" FontSize="18" Click="ch_b_Click"/>
-                <ToggleButton x:Name="Camera_Jandyruu" Style="{DynamicResource ZvukButton}" Click="Camera_Jandyruu_Click"/>
+                <ToggleButton x:Name="Camera_Jandyruu" Style="{DynamicResource ZvukButton}" Click="Camera_Jandyruu_Click" Unchecked="Camera_Jandyruu_Unchecked"/>
                 <TextBlock x:Name="Camera_Message"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="486,22,0,24" Text="Баарын жандыруу" Foreground="#0A6E9E" FontSize="18"></TextBlock>
                 <Label x:Name="lb_1" Content="" HorizontalAlignment="Left" Height="34" Margin="40,0,0,0" VerticalAlignment="Top" Width="780" />
             </Grid>

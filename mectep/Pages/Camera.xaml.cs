@@ -39,6 +39,35 @@ namespace mectep.Pages
                 Camera_Message.Text = "Баарын жандыруу";
             }
 
+            if (Camera_Jandyruu.IsChecked == true)
+            {
+                ch_b.IsChecked = true;
+                tb_01.IsChecked = true;
+                tb_02.IsChecked = true;
+                tb_03.IsChecked = true;
+                tb_04.IsChecked = true;
+                tb_05.IsChecked = true;
+                tb_06.IsChecked = true;
+                tb_07.IsChecked = true;
+                tb_08.IsChecked = true;
+                tb_09.IsChecked = true;
+                tb_10.IsChecked = true;
+                tb_11.IsChecked = true;
+                tb_12.IsChecked = true;
+                tb_13.IsChecked = true;
+                tb_14.IsChecked = true;
+                tb_15.IsChecked = true;
+
+            }
+            else
+            {
+                for (int a = 0; a <= 15; a++)
+                {
+                    if (btn_name[a] != null)
+                        btn_name[a].IsChecked = false;
+                }
+            }
+
         }
         ToggleButton[] btn_name = new ToggleButton[20];
         Camera_class Camera_ = new Camera_class(15);
@@ -125,6 +154,11 @@ namespace mectep.Pages
             }
 
 
+        }
+
+        private void Camera_Jandyruu_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ch_b.IsChecked = false;
         }
     }
 }
